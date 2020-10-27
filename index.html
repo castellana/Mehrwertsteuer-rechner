@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lev3_1_projekt_js-mehrwertsteuer-rechner</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700;800&display=swap');
+    </style>
+</head>
+<body>
+    <form action="return false">
+        <fieldset>
+            <legend>Mehrwertsteuer-Rechner</legend>
+       
+            <section class="frage">
+                <h2>Was soll berechnet werden?</h2>
+                <input type="radio" name="nettobrutto" id="zubrutto" checked>
+                <label for="zubrutto">Mehrwertsteuer aufschlagen (Netto zu Brutto)</label>
+                <br>
+                <input type="radio" name="nettobrutto" id="zunetto" > 
+                <label for="zunetto">Mehrwertsteuer abziehen (Brutto zu Netto)</label>
+            </section>
+
+            <section class="steuersatz">
+                <h2>Mehrwertsteuersatz</h2>
+                <input type="radio" name="prozent" id="neunzehn" value="19" checked>
+                <label for="neunzehn">19%</label>
+
+                <input type="radio" name="prozent" id="sieben" value="7"  > 
+                <label for="sieben">7%</label>
+            </section>
+
+            <section class="input-section">
+                <label for="" id="Netto-Brutto-Satz"></label>
+                <div class="input-div">
+                    <input type="number" name="" id="preis-input" required>
+
+                    <input type="button" class="button" value="BERECHNEN" onclick="berechnen()">
+                </div>
+            </section>
+    
+            <section class="ergebnisse">
+                <h2>Ergebnis</h2>
+                <article>
+                    <p class="result">Mehrwertsteuerbetrag:</p>
+                    <div id="ergebnis1"></div>
+                </article>
+                <article>
+                    <p class="result">Bruttobetrag(Endpreis):</p>
+                    <div id="ergebnis2"></div>
+                </article>
+            </section>
+        </fieldset>
+    </form>
+
+    <script src="assets/js/main.js"></script>
+</body>
+</html>
